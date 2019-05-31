@@ -8,25 +8,85 @@
     tools:ignore="MissingConstraints">
 
     <TextView
-        android:id="@+id/textview1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="View 1"
-        android:textColor="#f20"
-        android:textSize="30sp"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintRight_toLeftOf="@id/textview2"/>
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAllCaps="true"
+        android:textSize="22sp"
+        android:text="Chào mừng bạn đến với lập trình"
+        android:id="@+id/textviewTieude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
     <TextView
-        app:layout_constraintHorizontal_weight="3"
-        android:id="@+id/textview2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="View 2"
-        android:textColor="#f20"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textviewTieude"
+        android:id="@+id/textviewTieudeten"
         android:textSize="30sp"
-        app:layout_constraintLeft_toRightOf="@id/textview1"
-        app:layout_constraintRight_toRightOf="parent"/>
+        android:text="Tên : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/textviewTieudeten"
+        app:layout_constraintTop_toBottomOf="@id/textviewTieudeten"
+        android:id="@+id/textviewTieudengonngu"
+        android:textSize="30sp"
+        android:text="Ngôn ngữ : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineVertical1"
+        app:layout_constraintGuide_percent="0.44"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineVertical1"
+        app:layout_constraintTop_toBottomOf="@id/textviewTieude"
+        android:id="@+id/textviewTen"
+        android:textSize="28sp"
+        android:text="Lập trình Android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintBaseline_toBaselineOf="@id/textviewTieudengonngu"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineVertical1"
+        app:layout_constraintTop_toBottomOf="@id/textviewTen"
+        android:id="@+id/textviewNgonngu"
+        android:textSize="30sp"
+        android:text="Java cơ bản"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/view"
+        app:layout_constraintTop_toBottomOf="@id/textviewTieudengonngu"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        >
 
+    </View>
+    <ImageView
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
 </android.support.constraint.ConstraintLayout>
